@@ -11,7 +11,6 @@ import UIKit
      func didUpdateImage(image: UIImage, type: ImageType)
 }
 
-@available(iOS 13.0, *)
 public class MemojiView: UIView {
     internal var imageView: CircularImageView = {
         let view = CircularImageView()
@@ -70,6 +69,7 @@ public class MemojiView: UIView {
     }
     
     /// Flag indicting whether there should be a edit button.
+    @available(iOS 13.0, *)
     public lazy var showEditButton: Bool = isEditable {
         didSet {
             editImageView.removeFromSuperview()
@@ -80,7 +80,9 @@ public class MemojiView: UIView {
     public override var tintColor: UIColor! {
         didSet {
             imageView.backgroundColor = tintColor.withAlphaComponent(0.2)
-            editImageView.backgroundColor = tintColor
+            if #available(iOS 13.0, *) {
+                editImageView.backgroundColor = tintColor
+            }
         }
     }
     
@@ -114,12 +116,14 @@ public class MemojiView: UIView {
         super.layoutSubviews()
         self.layer.cornerRadius = self.frame.size.height / 2
         
-        guard showEditButton else { return }
-        self.addSubview(editImageView)
-        //TODO: Position view according to size
-        let size = CGSize(width: 30, height: 30)
-        let rect = CGPoint(x: imageView.frame.width - size.width - 15, y: imageView.frame.height - (size.height))
-        editImageView.frame = CGRect(origin: rect, size: size)
+        if #available(iOS 13.0, *) {
+            guard showEditButton else { return }
+            self.addSubview(editImageView)
+            //TODO: Position view according to size
+            let size = CGSize(width: 30, height: 30)
+            let rect = CGPoint(x: imageView.frame.width - size.width - 15, y: imageView.frame.height - (size.height))
+            editImageView.frame = CGRect(origin: rect, size: size)
+        }
     }
     
     //MARK: Functions
@@ -149,7 +153,6 @@ public class MemojiView: UIView {
 }
 
 //MARK: -MemojiTextFieldDelegate
-@available(iOS 13.0, *)
 extension MemojiView: MemojiTextFieldDelegate {
     func didUpdateEmoji(emoji: UIImage?, type: ImageType) {
         self.imageView.image = emoji

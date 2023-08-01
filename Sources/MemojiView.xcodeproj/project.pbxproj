@@ -74,7 +74,6 @@
 		D0A4D7142802FDFC0042879B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0A4D7172802FDFC0042879B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0A4D7192802FDFC0042879B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D89EC42B2A78F09F00F0E14E /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				D000257328043A22005F8C34 /* LICENSE */,
-				D89EC42B2A78F09F00F0E14E /* Package.swift */,
-				D89EC42D2A78F14000F0E14E /* Sources */,
+				D0A4D6C4280241510042879B /* MemojiView */,
 				D0A4D70A2802FDF30042879B /* MemojiViewDemo */,
 				D0A4D6C3280241510042879B /* Products */,
 				D0A4D6E42802418B0042879B /* Frameworks */,
@@ -170,14 +168,6 @@
 				D0A4D7192802FDFC0042879B /* Info.plist */,
 			);
 			path = MemojiViewDemo;
-			sourceTree = "<group>";
-		};
-		D89EC42D2A78F14000F0E14E /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				D0A4D6C4280241510042879B /* MemojiView */,
-			);
-			name = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,7 +464,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2E2G8B343X;
+				DEVELOPMENT_TEAM = L7BXVNN29K;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -506,7 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 2E2G8B343X;
+				DEVELOPMENT_TEAM = L7BXVNN29K;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -537,7 +527,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2E2G8B343X;
+				DEVELOPMENT_TEAM = L7BXVNN29K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemojiViewDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -566,7 +556,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2E2G8B343X;
+				DEVELOPMENT_TEAM = L7BXVNN29K;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemojiViewDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
