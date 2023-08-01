@@ -5,7 +5,7 @@ let package = Package(
     name: "MemojiView",
     defaultLocalization: "en",
     platforms: [
-        .iOS(.v12),
+        .iOS(.v13),
     ],
     products: [
         .library(

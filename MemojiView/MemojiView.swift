@@ -11,7 +11,6 @@ import UIKit
      func didUpdateImage(image: UIImage, type: ImageType)
 }
 
-@available(iOS 13.0, *)
 public class MemojiView: UIView {
     internal var imageView: CircularImageView = {
         let view = CircularImageView()
@@ -26,12 +25,13 @@ public class MemojiView: UIView {
         return tv
     }()
     
-    @available(iOS 13.0, *)
     internal lazy var editImageView: CircularImageView = {
         let i = CircularImageView()
         i.isUserInteractionEnabled = false
         //TODO: Fallback image
-        i.image = UIImage(systemName: "pencil")
+        if #available(iOS 13.0, *) {
+            i.image = UIImage(systemName: "pencil")
+        }
         i.tintColor = .white
         i.translatesAutoresizingMaskIntoConstraints = false
         return i
@@ -149,7 +149,6 @@ public class MemojiView: UIView {
 }
 
 //MARK: -MemojiTextFieldDelegate
-@available(iOS 13.0, *)
 extension MemojiView: MemojiTextFieldDelegate {
     func didUpdateEmoji(emoji: UIImage?, type: ImageType) {
         self.imageView.image = emoji
